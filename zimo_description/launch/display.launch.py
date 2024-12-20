@@ -8,9 +8,11 @@ from ament_index_python.packages import get_package_share_directory
 
 def generate_launch_description():
 
+    zimo_description_dir =get_package_share_directory("zimo_description")
+
     model_arg = DeclareLaunchArgument(
         name="model", 
-        default_value=os.path.join(get_package_share_directory("zimo_description"), "urdf", "zimo.urdf.xacro"),
+        default_value=os.path.join(zimo_description_dir, "urdf", "zimo.urdf.xacro"),
         description="Absolute path to the urdf file"
     )
     
