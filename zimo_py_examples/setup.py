@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'simple_publisher = zimo_py_examples.simple_publisher:main',
             'simple_subscriber = zimo_py_examples.simple_subscriber:main',
+            'simple_parameter = zimo_py_examples.simple_parameter:main',
         ],
     },
 )
