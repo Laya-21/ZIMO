@@ -1,20 +1,17 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="zimo">
+    <xacro:arg name="is_ignition" default="true" />
 
     <gazebo>
-        <xacro:if value="$(arg is_ignition)">
+        <xacro:if value="${is_ignition}">
             <plugin filename="ign_ros2_control_system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-                <parameter>
-                    
-                </parameter>
+                <parameter>$(find zimo_controller)/config/zimo_controller.yaml</parameter>
             </plugin>
         </xacro:if>
 
-        <xacro:unless value="$(args is_ignition)">
+        <xacro:unless value="${is_ignition}">
             <plugin filename="gz_ros2_control_system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-                <parameter>
-
-                </parameter>
+                <parameter>$(find zimo_controller)/config/zimo_controller.yaml</parameter>
             </plugin>
         </xacro:unless>
     </gazebo>
