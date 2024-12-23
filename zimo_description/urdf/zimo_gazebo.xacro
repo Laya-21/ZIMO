@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="zimo">
-    <xacro:arg name="is_ignition" default="true" />
+    <xacro:arg name="is_ignition" default="false" />
 
     <gazebo>
         <xacro:if value="${is_ignition}">

@@ -28,7 +28,7 @@ def generate_launch_description():
     # Declare is_ignition as a launch argument
     is_ignition_arg = DeclareLaunchArgument(
         name="is_ignition",
-        default_value="true",
+        default_value="false",
         description="Set to true if using Ignition Gazebo"
     )
 
@@ -85,7 +85,7 @@ def generate_launch_description():
     return LaunchDescription([
         model_arg,
         gazebo_resource_path,
-        is_ignition_arg,
+        # is_ignition_arg,
         robot_state_publisher,
         gazebo,
         gz_spawn_entity,

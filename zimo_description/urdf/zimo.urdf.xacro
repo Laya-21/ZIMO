@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="zimo">
 
-    <xacro:arg name="is_ignition" default="true" />
+    <!-- <xacro:arg name="is_ignition" default="false" />
 
     <xacro:include filename="$(find zimo_description)/urdf/zimo_ros2_controller.xacro" />
-    <xacro:include filename="$(find zimo_description)/urdf/zimo_gazebo.xacro" />
+    <xacro:include filename="$(find zimo_description)/urdf/zimo_gazebo.xacro" /> -->
 
     <xacro:property name="PI" value="3.14159" />
     <xacro:property name="effort" value="30.0" />
